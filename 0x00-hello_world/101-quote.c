@@ -1,17 +1,15 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Entry point of the program
  *
- * Description: This program prints a quote using write function
+ * Description: Prints a message to the standard error.
  *
- * Return: 1 (error).
+ * Return: Always 1 (Exit with error)
  */
-
-
 int main(void)
 {
-    char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-    write(2, quo, 59);
+    write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
     return (1);
 }
+
