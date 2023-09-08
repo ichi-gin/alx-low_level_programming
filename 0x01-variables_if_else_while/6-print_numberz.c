@@ -14,7 +14,7 @@ int i = 0;
 
 while (i <= 9)
 {
-putchar(i + '0'); // Add '0' to convert the integer to its character representation
+putchar(i + '0');
 i++;
 }
 
