@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
- *
- * Description: Prints a message with proper grammar to the standard output.
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
