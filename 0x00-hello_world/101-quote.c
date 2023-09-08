@@ -5,7 +5,7 @@
  *
  * Description: Prints a message to the standard error.
  *
- * Return: Always 0 (Success)
+ * Return: Always 1 (Exit with error)
  */
 int main(void)
 {
