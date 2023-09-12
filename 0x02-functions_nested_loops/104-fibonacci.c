@@ -1,19 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    unsigned long int a = 1, b = 2, c;
-    int count = 2;
-
-    printf("%lu, %lu, ", a, b);
+    unsigned long long int a = 1, b = 2, c;
+    int count = 0;
 
     while (count < 98) {
+        if (count == 0) {
+            printf("%llu", a);
+        } else {
+            printf(", %llu", a);
+        }
+
         c = a + b;
-        printf("%lu, ", c);
-
-        count++;
-
         a = b;
         b = c;
+
+        count++;
     }
 
     printf("\n");
