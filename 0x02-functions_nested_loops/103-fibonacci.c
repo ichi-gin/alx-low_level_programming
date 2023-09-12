@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-long int a = 1, b = 2, temp, sum = 2; /* Initialize sum with 2 to account for the second term (2). */
+long int a = 1, b = 2, temp, sum = 2;
 
 while (1)
 {
