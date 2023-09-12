@@ -15,7 +15,7 @@ int main() {
         if (count < 98) {
             printf(", ");
         } else {
-            printf("\n");
+            printf("...\n");
         }
 
         a = b;
