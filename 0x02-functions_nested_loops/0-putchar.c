@@ -1,9 +1,10 @@
-#include <unistd.h>
+#include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
  *
- * Description: Prints "_putchar" followed by a newline using putchar
+ * Description: Prints "_putchar" followed by a newline using _putchar
  *
  * Return: Always 0 (Success)
  */
@@ -14,7 +15,7 @@ int i = 0;
 
 while (text[i] != '\0')
 {
-putchar(text[i]);
+_putchar(text[i]);
 i++;
 }
 
