@@ -1,26 +1,25 @@
 #include <stdio.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-unsigned long int a = 1, b = 2, temp;
-int count;
+int main() {
+    unsigned long long int a = 1;
+    unsigned long long int b = 2;
+    unsigned long long int next;
 
-printf("%lu", a);
+    printf("%llu, %llu, ", a, b);
 
-for (count = 1; count < 98; count++)
-{
-printf(", %lu", b);
-temp = a + b;
-a = b;
-b = temp;
-}
+    for (int i = 3; i <= 98; i++) {
+        next = a + b;
+        printf("%llu", next);
 
-printf("\n");
+        if (i < 98) {
+            printf(", ");
+        } else {
+            printf("\n");
+        }
 
-return (0);
+        a = b;
+        b = next;
+    }
+
+    return 0;
 }
