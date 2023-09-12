@@ -1,24 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    unsigned long long int a = 1;
-    unsigned long long int b = 2;
-    unsigned long long int next;
+    unsigned long int a = 1, b = 2, c;
+    int count = 2;
 
-    printf("%llu, %llu, ", a, b);
+    printf("%lu, %lu, ", a, b);
 
-    for (int i = 3; i <= 98; i++) {
-        next = a + b;
-        printf("%llu", next);
+    while (count < 98) {
+        c = a + b;
+        printf("%lu", c);
 
-        if (i < 98) {
+        count++;
+
+        if (count < 98) {
             printf(", ");
         } else {
             printf("\n");
         }
 
         a = b;
-        b = next;
+        b = c;
     }
 
     return 0;
