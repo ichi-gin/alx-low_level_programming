@@ -10,14 +10,14 @@ int main(void)
 unsigned long int a = 1, b = 2, temp;
 int count;
 
-printf("%lu, %lu", a, b);
+printf("%lu", a);
 
-for (count = 2; count < 98; count++)
+for (count = 1; count < 98; count++)
 {
+printf(", %lu", b);
 temp = a + b;
 a = b;
 b = temp;
-printf(", %lu", temp);
 }
 
 printf("\n");
