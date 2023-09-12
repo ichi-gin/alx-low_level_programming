@@ -8,15 +8,9 @@ int main() {
 
     while (count < 98) {
         c = a + b;
-        printf("%lu", c);
+        printf("%lu, ", c); // Removed ellipsis here
 
         count++;
-
-        if (count < 98) {
-            printf(", ");
-        } else {
-            printf("...\n");
-        }
 
         a = b;
         b = c;
