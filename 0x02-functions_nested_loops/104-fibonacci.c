@@ -8,13 +8,15 @@ int main() {
 
     while (count < 98) {
         c = a + b;
-        printf("%lu, ", c); // Removed ellipsis here
+        printf("%lu, ", c);
 
         count++;
 
         a = b;
         b = c;
     }
+
+    printf("\n");
 
     return 0;
 }
