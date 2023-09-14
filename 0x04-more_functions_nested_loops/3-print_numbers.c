@@ -1,11 +1,9 @@
 #include "main.h"
 
-/* Declare the _putchar function */
-int _putchar(char c);
-
 /**
  * print_numbers - prints numbers from 0 to 9 followed by a new line
  */
+int _putchar(char c);
 void print_numbers(void)
 {
 char digit;
@@ -16,3 +14,4 @@ _putchar(digit);
 }
 _putchar('\n');
 }
+
