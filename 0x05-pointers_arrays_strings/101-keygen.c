@@ -1,26 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
-#define PASSWORD_LENGTH 62 /* 26 lowercase letters + 26 uppercase letters + 10 digits */
+/**
+ * main - print password.
+ *
+ * Return: 0.
+ */
 
 int main(void)
 {
-char valid_chars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-char password[101];
-int i;
+	int ascii = 2772, i = 0, j, random;
+	char password[100];
+	time_t t;
 
-srand(time(NULL)); /* Seed the random number generator with the current time */
+	srand((int) time(&t));
+	while (ascii > 126)
+	{
+		random = rand() % 126;
+		password[i] = random;
+		ascii -= random;
+		i++;
+	}
+	if (ascii > 0)
+		password[i] = ascii;
+	else
+	{
+		i--;
+	}
+	
 
-for (i = 0; i < 100; i++)
-{
-int random_index = rand() % PASSWORD_LENGTH;
-password[i] = valid_chars[random_index];
-}
-
-password[100] = '\0'; /* Null-terminate the password */
-
-printf("%s\n", password);
-
-return (0);
+	for (j = 0; j <= i; j++)
+	{
+		printf("%c", password[j]);
+	}
+	return (0);
 }
