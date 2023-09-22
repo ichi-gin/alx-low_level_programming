@@ -1,36 +1,28 @@
-#include "main.h"
-
+#iinclude "main.h"
 /**
- * rot13 - Encode a string using ROT13 cipher.
- * @str: The string to encode.
+ * rot13 - change letters to ROT13.
+ * @s: analized string.
  *
- * Return: A pointer to the encoded string.
+ * Return: String with all letters in ROT13 base.
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-    char *start = str;
-    char *rot13_table_lower = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char *rot13_table_encoded = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i = 0;
+	int j;
 
-    while (*str)
-    {
-        char *c = str;
-        char *table = (*c >= 'a' && *c <= 'z') ? rot13_table_lower : ((*c >= 'A' && *c <= 'Z') ? rot13_table_encoded + 26 : NULL);
-
-        if (table)
-        {
-            while (*table)
-            {
-                if (*c == *table)
-                {
-                    *c = *(table + 13);
-                    break;
-                }
-                table++;
-            }
-        }
-        str++;
-    }
-
-    return start;
+	while (*(s + i) != '\0')
+	{
+		for (j = 0; j <= 51; j++)
+		{
+			if (*(s + i) == a[j])
+			{
+				*(s + i) = rot[j];
+				break;
+			}
+		}
+		i++;
+	}
+	return (s);
 }
