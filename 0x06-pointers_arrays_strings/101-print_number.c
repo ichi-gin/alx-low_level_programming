@@ -1,15 +1,13 @@
 #include "main.h"
+
 /**
- * print_number - print an int numbers.
- * @n: number tested
- * Return: Always 0.
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
  */
 void print_number(int n)
 {
-	int i, j, digit, digits, power;
-	unsigned int temp, numchar, number;
+	unsigned int temp;
 
-	digit = 0;
 	if (n < 0)
 	{
 		_putchar('-');
@@ -20,27 +18,9 @@ void print_number(int n)
 		temp = n;
 	}
 
-	number = temp;
-
-	while (number >= 10)
+	if (temp >= 10)
 	{
-		number = number / 10;
-		digit++;
+		print_number(temp / 10);
 	}
-	digits = digit + 1;
-	power = 1;
-	i = 1;
-
-	while (i < digits)
-	{
-		power = power * 10;
-		i++;
-	}
-	j = power;
-	while (j >= 1)
-	{
-		numchar = (temp / j) % 10;
-		_putchar(numchar + '0');
-		j = j / 10;
-	}
+	_putchar(temp % 10 + '0');
 }
